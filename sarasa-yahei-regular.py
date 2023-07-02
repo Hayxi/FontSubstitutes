@@ -1,10 +1,10 @@
-import fontforge as ff
+import fontforge
 
 FONT_DIR = '输入字体所在路径，例如 C:/Fonts'
 COPYRIGHT = 'Copyright (c) 2015-2023, Renzhi Li (aka. Belleve Invis, belleve@typeof.net). Portions Copyright (c) 2016-2020 The Inter Project Authors. Portions Copyright (c) 2014, 2015 Adobe Systems Incorporated (http://www.adobe.com/). Portions Copyright (c) 2012 Google Inc.'
 
 def open_font(path):
-    return ff.open(path)
+    return fontforge.open(path)
 
 def remove_gasp(font):
     font.gasp = ()
@@ -79,7 +79,7 @@ def set_gothic_italic_names(font):
     )
 
 def set_ui_italic_names(font):
-    font.fontname = 'MicrosoftYaHeiUIItalic'
+    font.fontname = 'MicrosoftYaHeiUI-Italic'
     font.familyname = 'Microsoft YaHei UI'
     font.fullname = 'Microsoft YaHei UI Italic'
     font.version = get_version(font)
