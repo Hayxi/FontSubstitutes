@@ -1,6 +1,6 @@
 import fontforge
 
-FONT_DIR = '输入字体所在路径，例如 C:/Fonts'
+FONT_DIR = '输入更纱黑体字体文件所在路径'
 COPYRIGHT = 'Copyright (c) 2015-2023, Renzhi Li (aka. Belleve Invis, belleve@typeof.net). Portions Copyright (c) 2016-2020 The Inter Project Authors. Portions Copyright (c) 2014, 2015 Adobe Systems Incorporated (http://www.adobe.com/). Portions Copyright (c) 2012 Google Inc.'
 
 def open_font(path):
