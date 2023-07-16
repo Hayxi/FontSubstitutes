@@ -1,4 +1,4 @@
 Install FontForge and Run
 ```
-ffpython.exe sarasa-msyh-regular.py
+ffpython.exe sarasa-yahei-regular-unhinted.py
 ```
