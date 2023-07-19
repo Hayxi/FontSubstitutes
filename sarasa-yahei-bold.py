@@ -6,12 +6,6 @@ COPYRIGHT = 'Copyright (c) 2015-2023, Renzhi Li (aka. Belleve Invis, belleve@typ
 def open_font(path):
     return fontforge.open(path)
 
-def remove_gasp(font):
-    font.gasp = ()
-
-def set_cleartype(font):
-    font.head_optimized_for_cleartype = 1
-
 def get_version(font):
     return font.version
 
@@ -96,30 +90,22 @@ def set_ui_italic_names(font):
     )
 
 def gen_normal():
-    font = open_font(FONT_DIR + '/sarasa-gothic-sc-bold.ttf')
-    remove_gasp(font)
-    set_cleartype(font)
+    font = open_font(FONT_DIR + 'sarasa-gothic-sc-bold.ttf')
     set_gothic_normal_names(font)
 
-    font_ui = open_font(FONT_DIR + '/sarasa-ui-sc-bold.ttf')
-    remove_gasp(font_ui)
-    set_cleartype(font_ui)
+    font_ui = open_font(FONT_DIR + 'sarasa-ui-sc-bold.ttf')
     set_ui_normal_names(font_ui)
 
-    font.generateTtc(FONT_DIR + '/msyhbd.ttc', font_ui, ttcflags = ('merge'), layer = 1)
+    font.generateTtc(FONT_DIR + 'msyhbd.ttc', font_ui, ttcflags = ('merge'), layer = 1)
 
 def gen_italic():
-    font = open_font(FONT_DIR + '/sarasa-gothic-sc-bolditalic.ttf')
-    remove_gasp(font)
-    set_cleartype(font)
+    font = open_font(FONT_DIR + 'sarasa-gothic-sc-bolditalic.ttf')
     set_gothic_italic_names(font)
 
-    font_ui = open_font(FONT_DIR + '/sarasa-ui-sc-bolditalic.ttf')
-    remove_gasp(font_ui)
-    set_cleartype(font_ui)
+    font_ui = open_font(FONT_DIR + 'sarasa-ui-sc-bolditalic.ttf')
     set_ui_italic_names(font_ui)
 
-    font.generateTtc(FONT_DIR + '/msyhbdi.ttc', font_ui, ttcflags = ('merge'), layer = 1)
+    font.generateTtc(FONT_DIR + 'msyhbdi.ttc', font_ui, ttcflags = ('merge'), layer = 1)
 
 if __name__ == '__main__':
     gen_normal()
