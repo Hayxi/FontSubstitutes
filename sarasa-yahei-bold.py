@@ -90,19 +90,19 @@ def set_ui_italic_names(font):
     )
 
 def gen_normal():
-    font = open_font(FONT_DIR + 'sarasa-gothic-sc-bold.ttf')
+    font = open_font(FONT_DIR + 'SarasaGothicSC-Bold.ttf')
     set_gothic_normal_names(font)
 
-    font_ui = open_font(FONT_DIR + 'sarasa-ui-sc-bold.ttf')
+    font_ui = open_font(FONT_DIR + 'SarasaUiSC-Bold.ttf')
     set_ui_normal_names(font_ui)
 
     font.generateTtc(FONT_DIR + 'msyhbd.ttc', font_ui, ttcflags = ('merge'), layer = 1)
 
 def gen_italic():
-    font = open_font(FONT_DIR + 'sarasa-gothic-sc-bolditalic.ttf')
+    font = open_font(FONT_DIR + 'SarasaGothicSC-BoldItalic.ttf')
     set_gothic_italic_names(font)
 
-    font_ui = open_font(FONT_DIR + 'sarasa-ui-sc-bolditalic.ttf')
+    font_ui = open_font(FONT_DIR + 'SarasaUiSC-BoldItalic.ttf')
     set_ui_italic_names(font_ui)
 
     font.generateTtc(FONT_DIR + 'msyhbdi.ttc', font_ui, ttcflags = ('merge'), layer = 1)
